@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 6</title>
+</head>
+<script>
+    var bookInfo = {
+        이름: 'Nature of Code',
+        가격: '30000원',
+        저자: '다니엘 쉬프만',
+        ISBN: 9788968461901,
+        페이지수: '620페이지'
+    };
+
+    function game(name, mineral, gas, supply){
+        var gameVariable = {
+            이름: name,
+            미네랄: mineral,
+            가스: gas,
+            보급품: supply
+        };
+        return gameVariable;
+    }
+    var gameCharter = [];
+    gameCharter.push(game('일벌레',50,0,1));
+    gameCharter.push(game('여왕',150,0,2));
+    gameCharter.push(game('바퀴',75,25,2));
+    gameCharter.push(game('히드라리스크',100,50,2));
+    gameCharter.push(game('타락귀',150,100,2));
+
+    alert(JSON.stringify(gameCharter));
+</script>
+<body>
+    
+</body>
+</html>

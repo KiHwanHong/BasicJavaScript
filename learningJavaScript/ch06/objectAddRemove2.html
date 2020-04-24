@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function makeStudent(name, korean, math, english, science){
+        var willReturn = {
+            // 속성
+            이름: name,
+            국어: korean,
+            수학: math,
+            영어: english,
+            과학: science,
+
+            getSum: function() {
+                return this.국어 + this.수학 + this.영어 + this.과학;
+            },
+
+            getAverage: function() {
+                return this.getSum() / 4;
+            },
+
+            toString: function (){
+                return this.이름 + '\t' + this.getSum() + '\t' + this.getAverage();
+            }
+        };
+        return willReturn;
+    }
+
+    // 학생 정보 배열을 만듭니다.
+    var students = [];
+
+    // 배열에 요소를 넣습니다.
+    students.push(makeStudent('홍길동' , 87, 77, 94, 26 ));
+    students.push(makeStudent('홍길동2', 77, 87, 84, 36 ));
+    students.push(makeStudent('홍길동3', 67, 77, 74, 26 ));
+    students.push(makeStudent('홍길동4', 57, 67, 64, 96 ));
+    students.push(makeStudent('홍길동5', 47, 57, 54, 86 ));
+    students.push(makeStudent('홍길동6', 37, 47, 44, 76 ));
+    students.push(makeStudent('홍길동7', 27, 37, 34, 66 ));
+    students.push(makeStudent('홍길동8', 17, 27, 24, 56 ));
+    students.push(makeStudent('홍길동9', 97, 97, 14, 46 ));
+
+    // 출력합니다.
+    var output = '이름\t총점\t평균\n';
+    for (var i in students) {
+        output += students[i].toString() + '\n';
+    }
+    alert(output);
+</script>
+
+<body>
+    
+</body>
+</html>
