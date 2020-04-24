@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    
+    // 1번문제
+    function test(a,b,c){
+        console.log(a);
+        console.log(a * b);
+        console.log(a * b * c);
+    }
+    test(10, 100);
+
+    // 2번문제
+    function power(a, b){
+        if(b){
+            var output = 1;
+            for (let i = 0; i < b; i++) {
+                output *= a;
+            }
+            return output;
+        } else {
+            return a * a;
+        }
+    }
+    // alert(power(2));
+    // alert(power(2, 3));
+
+    function multiply(){
+        var output = 1;
+        for (var i = 0; i < arguments.length; i++) {
+            output *= arguments[i];
+        }
+        return output;
+    }
+    // alert(multiply(1,2,3,4,5));
+
+    // 4번문제 
+    function isNumberic(input){
+        function temp(key){
+            // 키 하나 확인
+            for (var i = 0; i < 10; i++) {
+                // 0번째 반복 : key = "1", i = "0", output=false
+                // 1번째 반복 : key = "1", i = "0", output=false
+                if(key == i){
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        for (var i = 0; i < input.length; i++) {
+            if(!temp(input[i])){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    alert(isNumberic("123456789876543"));  // true;
+    alert(isNumberic("asdfadsfasdf"));  // true;
+    alert(isNumberic("123456fgds1234dsf235"));  // false
+
+</script>
+<body>
+    
+</body>
+</html>
